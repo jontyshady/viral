@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 
 //html sanatization
 //for sanatizing html extra
-var sanitizeHtml = require('sanitize-html');
+// var sanitizeHtml = require('sanitize-html');
 
 // for escaping html tags 
 function escapeHtml(text) {
@@ -276,7 +276,8 @@ Meteor.methods({
     
 		
 	var sanatizeText= escapeHtml(post);
-	var clean = sanitizeHtml(sanatizeText); 		
+	// var clean = sanitizeHtml(sanatizeText);
+  var clean = sanatizeText; 		
 
 	if(clean.indexOf('#')!=-1 || clean.indexOf('@')!=-1){
 
