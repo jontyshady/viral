@@ -1,0 +1,42 @@
+.hashheader
+{
+	padding: 10px;
+	background-color: #1DA1F2; 
+	color: #fff;
+}
+
+.hashheader h2{
+	display: inline-block;
+	margin-right: 50px;
+}
+
+.hashheader button{
+	display: inline-block;
+	color: #1DA1F2;
+	background-color: #fff;
+	margin-bottom: 12px;
+	border: 0px;	
+	padding-left: 15px;
+	padding-right:15px;
+}
+
+
+
+.hashstrong{
+	display: inline-block;
+	color: #fff; 
+	background-color: #1DA1F2;
+	 font-size: 15px;
+	 margin:5px;
+	 margin-bottom:10px;
+	 padding-left: 7px;
+	 padding-right: 7px; 
+	  padding: 7px;
+	  border-radius: 5px;
+
+}
+
+.trendinghash{
+	margin-top: 20px;
+
+}

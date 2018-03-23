@@ -1,0 +1,19 @@
+ .navbar{
+ 	margin-bottom: 10px;
+ 	  border-bottom: 1px solid lightgrey;;
+ 	  background-color: white;
+ }
+.etw{
+	    position: absolute;
+    left: 50%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;
+}
+
+.etw li{
+	border-right: 1px solid lightgrey;
+}
+
+#excptn{
+	border-right: 0px;
+}

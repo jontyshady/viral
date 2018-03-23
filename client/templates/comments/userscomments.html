@@ -1,0 +1,135 @@
+<template name="comments">
+
+<div class="container-fluid cwrapper ">
+	<div class="row ">
+		<div class="col-lg-3 ">
+		
+			<div class="cleft bg ">			
+				<img class="cmmt_images" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+			
+				
+				<center><h4 class="" style="margin-bottom: 20px;">@{{name}}</h4></center>
+				<hr>		
+				<p id="post">{{{post}}}</p>
+				<hr>
+
+				<div class="extra">
+			<div class="promo"><a id="{{_id}}" href="#"><p  style="
+		    margin-bottom: 0px;">{{likecountT}}</p><span class="glyphicon glyphicon-fire">
+		       </span></a></div>
+		</div>
+
+		<div class="extra" id="comment">
+			 <!--comment count -->
+			<p>{{commentcountT}}</p><span class="glyphicon glyphicon-pencil"></span>
+		</div>
+
+		<button type="button" class="btn btn-success commntnotify subevent">Notify me</button>
+</div>
+				  <!--break tag -->
+
+				
+						
+
+							
+						
+
+						
+					</div>
+				
+			<!--	<div class="col-lg-6 " >
+				<div class=" usercommentz">
+				{{#each comment}}
+				<p>
+				{{this.comment}}
+				{{this.username}}
+				</p>
+				<hr>
+				{{/each}}
+					
+					
+
+				</div>
+
+				<div class="chat-container">
+       <div class="chat-head">Chat</div>
+       <div class="chat-body">
+         <div class="left-message">
+         	{{#each comment}}
+				<p>
+				{{this.comment}}
+				{{this.username}}
+				</p>
+				<hr>
+				{{/each}}
+         </div>
+
+       </div>
+       <div class="chat-footer">
+         <textarea>type your message here</textarea>
+         <button type="button">Send</button>
+       </div>
+    </div>-->
+<div class="container FIXED">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="panel panel-primary">
+               
+            
+                <div class="panel-body">
+                    <ul class="chat">
+{{#each comment}}
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix" >
+                                <div class="header">
+                                    <strong class="primary-font">{{this.username}}</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                                </div>
+                               
+				<p>
+				{{{this.comment}}}
+				
+				</p>
+			
+				
+                            </div>
+                        </li>
+{{/each}}
+                        
+                        
+                    </ul>
+                </div>
+               
+                	<form class="panel-footer posted ">
+                    <div class="form-group">
+                        <input name="text" type="text" autocomplete="off" class="form-control input-sm" placeholder="Type your message here..." />  
+
+                        
+                    </div>
+                    </form>
+
+
+                
+           
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+				</div>
+				<div class="col-lg-3 cright" >
+					<p>ADZ</p>
+				</div>
+
+				
+			
+		</div>
+	
+</template>

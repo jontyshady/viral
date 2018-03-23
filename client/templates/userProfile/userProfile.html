@@ -1,0 +1,40 @@
+<template name="userProfile">
+
+	<div class="container user_profile">
+		<div class="row">
+			<div class="col-sm-6 col-xs-6 col-lg-6">				
+				<img class="user_images" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+			</div>	
+			<div class="col-sm-6 col-xs-6 col-lg-6">
+				
+				<h3 class="ur_name">@{{user.username}}</h3>
+				<h5 class="ur_name">{{user.profile.first_name}} {{user.profile.last_name}} </h5>		
+				
+				<button class="btn btn-primary subscribe watch" type=""><span class="glyphicon glyphicon-eye-open"></span> {{# if watchfeeds}}watching{{else}}watch{{/if}}</button>
+				<br>
+				<br>					
+			</div>
+
+			<div class="col-lg-12 fw" >
+			  <center>
+				<h4>feeds 0 | watching {{watching}}</h4>
+			  </center>
+			  <hr>
+			</div>	
+
+			
+		</div>	
+
+		
+	</div>
+	<div class="container">
+			{{> userprofilebody}} 
+		
+	</div>
+
+
+	
+
+	<!--	
+	-->
+</template>

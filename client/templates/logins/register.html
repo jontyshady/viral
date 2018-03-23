@@ -1,0 +1,37 @@
+<template name="register">
+
+ <div class="container">
+
+      <form class="form-signup">
+        <h2 class="form-signup-heading">Create An Account</h2>
+
+         <label for="user name" class="sr-only">User Name</label>
+        <input type="text" name="user_name" id="user_name" class="form-control" placeholder="User Name" required autofocus>
+        
+
+        <label for="first name" class="sr-only">First Name</label>
+        <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name" required autofocus>
+        
+        <label for="last name" class="sr-only">Last Name</label>
+        <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name" required autofocus>
+        
+       
+        
+        <label for="email" class="sr-only">Email address</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+        
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+        
+        <label for="password2" class="sr-only">Password Confirm</label>
+        <input type="password" name="password2" id="password2" class="form-control" placeholder="Password Confirm" required>
+       
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <br>
+
+        <p>Have An Account <a href="{{pathFor 'formLayout'}}">login</a>
+        </p>
+      </form>
+
+    </div> <!-- /container -->
+</template>

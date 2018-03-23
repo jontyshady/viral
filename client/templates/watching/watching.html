@@ -1,0 +1,94 @@
+<template name="watching">
+
+{{#if watch}}
+<div  class="container">
+<div class="masonry masonry-columns-5" >
+
+
+{{#each watch}}
+ {{> watchingpost}}
+
+{{/each}}
+
+
+
+
+
+</div>
+</div>
+
+
+{{else}}
+<center>
+<h2 style="margin-top: 15%; color: #e5e5e5;">you are not watching anyone</h2>
+</center>
+{{/if}}
+
+
+
+{{> modelBtn}}
+
+</template>
+
+
+
+
+<template name="watchingpost">
+
+
+		<div class="masonry-item" >
+			  	<div class="media">
+				  <!-- <a href="{{url}}" target="_blank"><img src="{{url}}"></a> 
+			      for images if any-->
+				<div class="images">				
+				  
+				</div>
+
+				 <!-- for text if any-->
+
+				<div class="text" >
+					<p>{{{this.body}}}</p>
+				</div>
+
+			      <!--for likes nd share if any  style="color:blue"-->
+
+				<div class="extra">
+					 <!--like-->
+					<div class="promo"><a id="{{_id}}" href="#"><p  style="
+    margin-bottom: 0px;">{{promotioncount _id}}</p><span class="glyphicon glyphicon-fire">
+       </span></a></div>
+				</div>
+				
+
+				<div class="extra" id="comment">
+					 <!--comment-->
+					<a href="/comments/{{_id}}"><p style="
+    margin-bottom: 0px; margin-top: 2px;">{{commentcount _id}}</p><span class="glyphicon glyphicon-pencil"></span>
+					</a>
+				</div>
+
+				  <!--break tag -->
+
+				<hr>
+
+				 <!-- for name must-->
+				<div class="author ">
+				<a href="/users/{{username}}">
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" id="circular"  width="70" height="70">
+			    	<strong id="name">@{{username}}</strong> 
+			    </a>	   <strong>{{author}}</strong>
+			    </div>
+
+			    <!-- for promotion tag-->
+			    <div class="promotion extra" id="comment">
+
+			   <!-- <div class="promo"><a id="{{_id}}" href="#"><p>{{promotioncount _id}}</p><span class="glyphicon glyphicon-fire">
+       </span></a></div>-->
+    
+			    </div>
+			    	
+			  </div>
+
+</div>
+
+</template>

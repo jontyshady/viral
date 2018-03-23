@@ -1,0 +1,119 @@
+.home-box{
+	margin-top: 10px;
+}
+
+/* text in box */
+
+/* help to float like dislike comment to left */
+.extra{
+		float: left;
+			 
+}
+.extra span{
+	margin-top: 7px;
+}
+
+/* circle the image of author*/
+
+#circular {
+	float: left;
+	margin-left: 9px;
+	margin-bottom: 3px;
+	margin-top: 6px;
+	width: 20px;
+	height: 20px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	
+	}
+
+/* put image of the auther left */
+.author{
+	
+	clear:both;
+	float: left;
+	margin: 5px 0 5px 5px;
+}
+
+/* help the name of the auther aline with image */
+
+#name{
+	position:absolute;   
+	margin-left: 5px;
+	margin-top: 9px;
+	font-size: 12px;
+
+}
+
+/* help to set the image size of like dislike and comment*/
+
+.like{
+
+	display: block;  
+  max-width:12px;
+  max-height:12px;
+  width: auto;
+  height: auto;
+  margin-left: 5px;
+  margin-top: 2px;
+
+}
+
+/* help to like the text with like dislike and comment ie 400 like */
+.extra p{
+	float: left;
+	margin-left: 10px;
+	font-size: 11px;
+
+}
+
+/* for line break btw likes and auther */
+
+.media hr{ 
+	clear: both;
+  
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* comment  float right  ie 400 comments to right */
+
+#comment{
+	margin-left: 0;
+	margin-right: 15px;
+  float: right;
+
+}
+
+/*this help to give margin to promotion */
+.promo{
+	margin-top: 4px;
+}
+
+
+/* modal button style*/
+
+#special_btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50; /* Green */
+    position: fixed; bottom: 100px; right: 15px;
+}
+
+#special_btn {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#special_btn:hover {
+    background-color: white; /* Green */
+    color: #4CAF50;
+}
+#special_btn:focus {
+  outline: none;
+}
+/* END modal button style*/

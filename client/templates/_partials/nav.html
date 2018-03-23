@@ -1,0 +1,106 @@
+<template name="nav">
+     <nav class="navbar  navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{pathFor 'homeIndex'}}">viral</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+             
+                <input class="form-control typeahead" name="team" type="text"
+                       placeholder="NBA and NHL teams"
+                       autocomplete="off" spellcheck="off"
+                       data-sets="jx"/>
+              
+                        
+          </ul>
+
+        <ul class=" etw nav navbar-nav  navbar-center" > 
+        <li><a  href="{{pathFor 'trending'}}"><span class="glyphicon glyphicon-fire">
+       </span> trending</a></li>
+
+        <li><a  href="{{pathFor 'homeIndex'}}"><span class="glyphicon glyphicon-home">
+       </span> explore</a></li>
+        <li id="excptn"><a  href="{{pathFor 'watching'}}"><span class="glyphicon glyphicon-eye-open"></span> watching</a></li>              
+        </ul>
+
+          <ul class="nav navbar-nav navbar-right" id="nav">
+             {{#if currentUser}}
+                  <!-- editing start from here -->
+              <li id="notification_li">
+              <span id="notification_count">3</span>
+
+              <a href="#" id="notificationLink">
+              <!--{{name}}   {{pathFor 'profile'}}-->
+             <span class="glyphicon glyphicon-bell"></span> notify
+              </a>
+              <div id="notificationContainer">
+              <div id="notificationTitle">Notifications</div>
+              <div id="notificationsBody" class="notifications">
+              <center>
+                {{#each notify}}
+
+                {{#if _eq flags 'like'}}   
+
+                <li>
+                  you got {{this.count}} new likes
+                </li>
+                 {{/if}}
+
+                 <!--/.nav-collapse -->
+
+                {{#if _eq flags 'hash'}}
+                <li>
+                  #{{this.hashtag}} got {{this.count}}  post
+                </li>
+
+                {{/if}}
+
+                <!--/.nav-collapse -->
+
+                 {{#if _eq flags 'comment'}}
+                <li>
+                  @{{this.username}} has comment on the post you subscribed 
+                </li>
+
+                {{/if}}
+
+                {{/each}}
+               </center> 
+              </div>
+              <div id="notificationFooter"><a href="#">See All</a></div>
+              </div>
+
+              </li>
+
+                 <div class="dropdown">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"  width="50" height="50">
+                    <div id="myDropdown" class="dropdown-content">
+                     <a href="#" class="path_profile">profile</a>
+                    <a href="#">extra</a>                    
+                    <a class ="sign-out" href="#">sign out</a>
+                    </div>
+                  </div>
+
+
+                       
+               {{else}}
+                <li><a href="{{pathFor 'formLayout'}}">sign in</a></li>
+                <li><a href="{{pathFor 'register'}}">sign up</a></li>
+               {{/if}}
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+</template>
+
+<template name="team">
+    <h4><i>{{name}}</i></h4>
+</template>

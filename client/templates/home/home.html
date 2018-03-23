@@ -1,0 +1,106 @@
+<template name="homeIndex">
+<!--
+<div id="result-container" class="container grid">-->
+
+<div  class="container" id="waterfall-container">
+
+<div class="masonry masonry-columns-5" >
+
+{{#each posts}}
+ {{> post}}
+{{/each}}
+
+</div>
+
+</div>
+
+	{{> modelBtn}}
+
+
+</template>
+
+
+<template name="post">
+
+		<div class="masonry-item" >
+			  	<div class="media">
+				  <!-- <a href="{{url}}" target="_blank"><img src="{{url}}"></a> 
+			      for images if any-->
+				<div class="images">				
+				  
+				</div>
+
+				 <!-- for text if any-->
+
+				<div class="text" >
+					<p>{{{body}}}</p>
+				</div>
+
+			      <!--for likes nd share if any  style="color:blue"-->
+
+				<div class="extra">
+					 <!--like-->
+					<div class="promo"><a id="{{_id}}" href="#"><p  style="
+    margin-bottom: 0px;">{{promotioncount _id}}</p><span class="glyphicon glyphicon-fire">
+       </span></a></div>
+				</div>
+				
+
+				<div class="extra" id="comment">
+					 <!--comment-->
+					<a href="/comments/{{_id}}"><p style="
+    margin-bottom: 0px; margin-top: 2px;">{{commentcount _id}}</p><span class="glyphicon glyphicon-pencil"></span>
+					</a>
+				</div>
+
+				  <!--break tag -->
+
+				<hr>
+
+				 <!-- for name must-->
+				<div class="author ">
+				<a href="/users/{{username}}">
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" id="circular"  width="70" height="70">
+			    	<strong id="name">@{{username}}</strong> 
+			    </a>	   <strong>{{author}}</strong>
+			    </div>
+
+			    <!-- for promotion tag-->
+			    <div class="promotion extra" id="comment">
+
+			   <!-- <div class="promo"><a id="{{_id}}" href="#"><p>{{promotioncount _id}}</p><span class="glyphicon glyphicon-fire">
+       </span></a></div>-->
+    
+			    </div>
+			    	
+			  </div>
+
+</div>
+
+ 
+<!--
+<div class="masonry-item">
+<div class="media">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" class="img-responsive center-block" alt="">
+</div>
+<h2 class="post-title">Getting Bootstrap Tabs to Play Nice with Masonry</h2>
+<h6 class="post-info">October-8 2015 : Posted by Admin</h6>
+<p>{{body}}
+</p>
+<a href="" title="" class="read-more">Read More</a>
+<div class="tag-comment">
+<span class="pull-left"><i class="fa fa-tags"></i> technology, web</span>
+<span class="pull-right"><i class="fa fa-comments"></i> no comments</span>
+</div>
+</div>-->
+
+
+								<!--END OF DIV TAG
+							***************************************************
+										START OF TEST DIV TAGS -->
+
+</template>
+
+
+
+
